@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física y Química</title>
+    <link rel="stylesheet" href="style-fis-quim.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2406/2406774.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Física y Química</h1>
+        <h2>Examen el 28/10/2025</h2>
+    </header>
+
+    <!-- BOTONES DE CATEGORÍAS -->
+    <nav class="categories">
+        <button class="category-btn" onclick="showCategory('metodo')">Método Científico</button>
+        <button class="category-btn" onclick="showCategory('magnitud')">Magnitud y Medida</button>
+        <button class="category-btn" onclick="showCategory('multiples')">Múltiplos y Submúltiplos</button>
+        <button class="category-btn" onclick="showCategory('notacion')">Notación Científica</button>
+    </nav>
+
+    <!-- SECCIÓN 1: Método Científico -->
+    <section id="metodo" class="category-content">
+        <h3>Método Científico</h3>
+        <p>El proceso que se sigue para trabajar en ciencia tiene varias etapas:</p>
+        <ol>
+            <li>Observación e identificación del problema</li>
+            <li>Hipótesis</li>
+            <li>Experimentación y análisis de resultados
+                <ul>
+                    <li>Si no confirma la hipótesis → volver al paso 2</li>
+                    <li>Si confirma la hipótesis → paso 5</li>
+                </ul>
+            </li>
+            <li>Enunciar leyes y teorías</li>
+            <li>Comunicación a la comunidad científica</li>
+        </ol>
+    </section>
+
+    <!-- SECCIÓN 2: Magnitud y Medida -->
+    <section id="magnitud" class="category-content">
+        <h3>Magnitud y Medida</h3>
+        <p>Una magnitud es la propiedad de un cuerpo que puede medirse.</p>
+        <p>Ejemplos: longitud, masa, dureza, tiempo, capacidad, volumen…</p>
+        <h4>¿Qué es medir?</h4>
+        <p>Es comparar el tamaño de una magnitud con otra que tomamos de referencia. El resultado de una medida es un número y una unidad (m, cm, kg…)</p>
+        <blockquote>
+            Por acuerdo internacional en ciencia siempre se trabaja en el Sistema Internacional de Unidades (S.I).<br>
+            Las magnitudes pueden ser: básicas/fundamentales y derivadas. Las derivadas pueden obtenerse a través de las básicas.
+        </blockquote>
+
+        <table>
+            <tr><th>Magnitud</th><th>Unidad S.I </th><th>Símbolo</th></tr>
+            <tr><td>Longitud</td><td>Metro</td><td>m</td></tr>
+            <tr><td>Masa</td><td>Kilogramo</td><td>Kg</td></tr>
+            <tr><td>Tiempo</td><td>Segundos</td><td>s</td></tr>
+            <tr><td>Temperatura</td><td>Kelvin</td><td>K</td></tr>
+            <tr><td>Intensidad luminosa</td><td>Candela</td><td>cd</td></tr>
+            <tr><td>Intensidad corriente</td><td>Amperios</td><td>A</td></tr>
+            <tr><td>Cantidad de sustancia</td><td>Moles</td><td>mol</td></tr>
+        </table>
+    </section>
+
+    <!-- SECCIÓN 3: Múltiplos y Submúltiplos -->
+    <section id="multiples" class="category-content">
+        <h3>Múltiplos y Submúltiplos</h3>
+        <p>Factores de conversión:</p>
+        <pre>
+TERA = T
+  | | |
+GIGA = G
+  | | |
+MEGA = M
+  | | |
+KILO = K - HECTO = H - DECA = da - UNIDAD - DECI = d - CENTI = c - MILI = m
+                         ㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ  | | |
+                           ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ MICRO = µ                       
+                           ㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ | | |
+                           ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ NANO = n                         
+                      ㅤㅤ  ㅤㅤㅤㅤ   ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ | | |
+                           ㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ  PICO = p                       
+        </pre>
+    </section>
+
+    <!-- SECCIÓN 4: Notación Científica -->
+    <section id="notacion" class="category-content">
+        <h3>Notación Científica</h3>
+        <p>Se usa para escribir cantidades muy grandes o muy pequeñas usando potencias de base 10:</p>
+        <p>Formato: <strong>m x 10^N</strong></p>
+        <ul>
+            <li><strong>m:</strong> Coeficiente, 1 ≤ |m| < 10, puede ser decimal y positivo o negativo.</li>
+            <li><strong>10:</strong> Base de la potencia, siempre 10.</li>
+            <li><strong>N:</strong> Exponente, entero, positivo o negativo. N+ → punto decimal a la derecha, N- → punto decimal a la izquierda.</li>
+        </ul>
+    </section>
+
+    <!-- ENLACE A OTRA PÁGINA -->
+    <a href="index.html" class="btn-home">Ir a Asignaturas</a>
+
+    <!-- SCRIPT -->
+    <script>
+        const sections = document.querySelectorAll('.category-content');
+        const toggleBtn = document.getElementById('toggleTheme');
+
+        function showCategory(categoryId) {
+            sections.forEach(sec => {
+                sec.classList.add('fade-out');
+                setTimeout(() => sec.style.display = 'none', 300);
+            });
+
+            const activeSection = document.getElementById(categoryId);
+            setTimeout(() => {
+                activeSection.style.display = 'block';
+                activeSection.classList.remove('fade-out');
+                activeSection.classList.add('fade-in');
+                setTimeout(() => activeSection.classList.remove('fade-in'), 300);
+            }, 300);
+        }
+
+        // Mostrar por defecto el primer tema
+        showCategory('metodo');
+
+        // Cambiar tema
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
+</body>
+</html>

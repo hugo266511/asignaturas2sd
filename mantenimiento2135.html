@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento</title>
+    <link rel="stylesheet" href="maintain.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/3917/3917309.png">
+</head>
+<body>
+    <div class="container">
+        <div class="icon">⚙️</div>
+        <h1>En Mantenimiento...</h1>
+        <p>Este tema se está modificando, disponible en breve.</p>
+        <div class="loader"></div>
+
+        <!-- ⏱️ CONTADOR DE TIEMPO TRANSCURRIDO -->
+        <div class="contador-container">
+            <h2>Tiempo en mantenimiento:</h2>
+            <p id="contador">00:00:00</p>
+        </div>
+    </div>
+
+    <script>
+        // Comprueba si ya hay una hora de inicio guardada
+        let inicio = localStorage.getItem("inicioMantenimiento");
+
+        if (!inicio) {
+            // Si no existe, la guarda ahora
+            inicio = new Date().getTime();
+            localStorage.setItem("inicioMantenimiento", inicio);
+        } else {
+            // Convierte a número
+            inicio = Number(inicio);
+        }
+
+        // Actualiza el contador cada segundo
+        function actualizarContador() {
+            const ahora = new Date().getTime();
+            const diferencia = ahora - inicio; // milisegundos transcurridos
+
+            const horas = String(Math.floor(diferencia / (1000 * 60 * 60))).padStart(2, '0');
+            const minutos = String(Math.floor((diferencia / (1000 * 60)) % 60)).padStart(2, '0');
+            const segundos = String(Math.floor((diferencia / 1000) % 60)).padStart(2, '0');
+
+            document.getElementById('contador').textContent = `${horas}:${minutos}:${segundos}`;
+        }
+
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+    </script>
+</body>
+</html>
